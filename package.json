@@ -6,8 +6,8 @@
     "markdown-it": "^8.4.0",
     "nodemon": "^1.12.1"
   },
-  "name": "30-seconds-of-code",
-  "description": "A collection of useful Javascript snippets.",
+  "name": "30-seconds-of-code-zh-CN",
+  "description": "精心收集的有用的 JavaScript 代码片段，可以让你在 30 秒或更少的时间内理解",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
@@ -17,17 +17,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Chalarangelo/30-seconds-of-code.git"
+    "url": "git+https://github.com/justjavac/30-seconds-of-code-zh-CN.git"
   },
   "keywords": [
     "javascript",
     "snippets",
     "list"
   ],
-  "author": "Chalarangelo (chalarangelo@gmail.com)",
+  "author": "justjavac (justjavac@gmail.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Chalarangelo/30-seconds-of-code/issues"
+    "url": "https://github.com/justjavac/30-seconds-of-code-zh-CN/issues"
   },
-  "homepage": "https://github.com/Chalarangelo/30-seconds-of-code#readme"
+  "homepage": "https://github.com/justjavac/30-seconds-of-code-zh-CN#readme"
 }
