@@ -1,12 +1,12 @@
 ![Logo](/logo.png)
 
 # 30 seconds of code
-> Curated collection of useful Javascript snippets that you can understand in 30 seconds or less.
+> 精心收集的有用的 JavaScript 代码片段，可以让你在 30 秒或更少的时间内理解。
 
-- Use <kbd>Ctrl</kbd> + <kbd>F</kbd> or <kbd>command</kbd> + <kbd>F</kbd> to search for a snippet.
-- Contributions welcome, please read [contribution guide](CONTRIBUTING.md).
+- 使用 <kbd>Ctrl</kbd> + <kbd>F</kbd> 或 <kbd>command</kbd> + <kbd>F</kbd> 快速搜索
+- 欢迎贡献代码，再此之前请阅读 [contribution guide](CONTRIBUTING.md).
 
-## Contents
+## 目录
 
 * [Anagrams of string (with duplicates)](#anagrams-of-string-with-duplicates)
 * [Average of array of numbers](#average-of-array-of-numbers)
