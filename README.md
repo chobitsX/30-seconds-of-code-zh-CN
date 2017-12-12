@@ -8,7 +8,7 @@
 
 ## 目录
 
-* [Anagrams of string (with duplicates)](#anagrams-of-string-with-duplicates)
+* [字符串换位组合(可重复)](#anagrams-of-string-with-duplicates)
 * [Average of array of numbers](#average-of-array-of-numbers)
 * [Capitalize first letter of every word](#capitalize-first-letter-of-every-word)
 * [Capitalize first letter](#capitalize-first-letter)
@@ -49,12 +49,11 @@
 * [UUID generator](#uuid-generator)
 * [Validate number](#validate-number)
 
-### Anagrams of string (with duplicates)
+<h3 id="anagrams-of-string-with-duplicates">字符串换位组合(可重复)</h3>
 
-Use recursion.
-For each letter in the given string, create all the partial anagrams for the rest of its letters.
-Use `map()` to combine the letter with each partial anagram, then `reduce()` to combine all anagrams in one array.
-Base cases are for string `length` equal to `2` or `1`.
+比如字符串 `"ab"` 的所有换位组合字符串是 `["ab", "ba"]`。而 `"aab"` 的所有换位组合是 `["aab", "aba", "aab", "aba", "baa", "baa"]`（允许重复）。
+
+使用递归。对于给定字符串中的每个字母，为其余字母创建所有的换位组合。使用 `map()` 把当前字母和其余字母的换位组合结合起来，然后用 `reduce()` 把所有换位组合放到一个数组里。递归结束条件是字符串的 `length` 属性等于 `2` 或 `1`。
 
 ```js
 const anagrams = s => {
