@@ -20,7 +20,10 @@ try {
     return 0;
   });
   for(var snippet of snippetFilenames){
-    snippets[snippet] = fs.readFileSync(path.join(snippetsPath,snippet),'utf8');
+    var content = fs.readFileSync(path.join(snippetsPath,snippet),'utf8');
+    var title = content.substring(4, content.search('\n'));
+    var text = content.substring(content.search('\n'));
+    snippets[snippet] = {title, text};
   }
 }
 catch (err){
@@ -40,14 +43,18 @@ catch (err){
 try {
   output += `${startPart+'\n'}`;
   for(var snippet of Object.entries(snippets))
-    output += `* [${snippet[0][0].toUpperCase() + snippet[0].replace(/-/g,' ').slice(1,snippet[0].length-3)}](#${snippet[0].slice(0,snippet[0].length-3).replace(/\(/g,'').replace(/\)/g,'').toLowerCase()})\n`
+    output += `* [${snippet[1].title}](#${anchor(snippet[0])})\n`
   output += '\n';
   for(var snippet of Object.entries(snippets))
-    output += `${snippet[1]+'\n'}`;
+    output += `<h3 id="${anchor(snippet[0])}">${snippet[1].title}</h3>${snippet[1].text}`;
   output += `${endPart+'\n'}`;
   fs.writeFileSync('README.md', output);
 }
 catch (err){
   console.log('Error during README generation: '+err);
   process.exit(1);
+}
+
+function anchor(filename) {
+  return filename.slice(0,filename.length-3).replace(/\(/g,'').replace(/\)/g,'').toLowerCase();
 }
